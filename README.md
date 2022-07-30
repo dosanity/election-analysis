@@ -15,7 +15,8 @@ We are given the following tasks:
 
 ## Resources
 
-+ Data Source: election_result.csv
++ Data Source: [election_results.csv](https://github.com/dosanity/election-analysis/files/9227718/election_results.csv)
+
 + Software: Python 3.10, Visual Studio 1.69.2
 
 ## Election Results
