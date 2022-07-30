@@ -29,7 +29,28 @@ The analysis of the counties in the election show that:
   + Jefferson received 10.5% of the votes and 38,855 number of votes.
   + Denver received 82.8% of the votes and 306,055 number of votes.
   + Arapahoe received 6.7% of the votes and 24,801 number of votes.
++ The largest county turnout was:
+  + Denver, which received 82.8% of the votes and 306,055 number of votes.  
+  
+### Results of Candidates
 
+The analysis of the election show that:
+
++ There were 369,711 votes casted in the election. 
++ The candidates were: 
+  + Charles Casper Stockham
+  + Diana DeGette
+  + Raymon Anthony Doane
++ The candidate results were:
+  + Charles Casper Stockham received 23.0% of the votes and 85,213 number of votes.
+  + Diana DeGette received 73.8% of the votes and 272,892 number of votes.
+  + Raymon Anthony Doane received 3.1% of the votes and 11,606 number of votes.  
++ The winner of the election was:
+  + Diana DeGette, who received 73.8% of the votes and 272,892 number of votes.  
+  
+
+## Code Breakdown
+**Calculate the voter turnout for each county and the percentage of votes from each county out of the total count.**
 ```
     # Write a for loop to get the county from the county dictionary.
     for county_name in county_votes:
@@ -46,7 +67,7 @@ The analysis of the counties in the election show that:
 
         print(county_results)
 ```
-Python Output:
+> Python Output:
 ```
 -------------------------
 Jefferson: 10.5% (38,855)
@@ -56,8 +77,7 @@ Denver: 82.8% (306,055)
 Arapahoe: 6.7% (24,801)
 -------------------------
 ```
-+ The largest county turnout was:
-  + Denver, which received 82.8% of the votes and 306,055 number of votes.
+**Determine the county with the highest turnout.**
 ```
         # Write an if statement to determine the winning county and get its vote count.
         if (c_votes > largest_county_count):
@@ -65,7 +85,7 @@ Arapahoe: 6.7% (24,801)
             largest_county = county_name
             largest_county_percentage = c_votes_percentage
 ```
-Python Output:
+> Python Output:
 ```
 -------------------------
 Largest County Turnout: Denver
@@ -73,11 +93,7 @@ Largest County Vote Count: 306055
 Largest County Percentage: 82.8%       
 -------------------------
 ```
-
-### Results of Candidates
-
-The analysis of the election show that:
-+ There were 369,711 votes casted in the election.
+**Calculate the total number of votes cast.**
 ```
 # Initialize a total vote counter.
 total_votes = 0
@@ -88,20 +104,13 @@ total_votes = 0
         # Add to the total vote count
         total_votes = total_votes + 1
 ```
-Python Output:
+> Python Output:
 ```
 -------------------------
 Total Votes: 369,711
 -------------------------
 ```
-+ The candidates were: 
-  + Charles Casper Stockham
-  + Diana DeGette
-  + Raymon Anthony Doane
-+ The candidate results were:
-  + Charles Casper Stockham received 23.0% of the votes and 85,213 number of votes.
-  + Diana DeGette received 73.8% of the votes and 272,892 number of votes.
-  + Raymon Anthony Doane received 3.1% of the votes and 11,606 number of votes.
+**Calculate the total number of votes each candidate received and the percentage of votes each candidate won.**
 ```
     # Write a for loop to get the candidate name from dictionary.
     for candidate_name in candidate_votes:
@@ -116,7 +125,7 @@ Total Votes: 369,711
         # Print each candidate's voter count and percentage to the terminal.
         print(candidate_results)
 ```
-Python Output:
+> Python Output:
 ```
 -------------------------
 Charles Casper Stockham: 23.0% (85,213)
@@ -124,10 +133,7 @@ Diana DeGette: 73.8% (272,892)
 Raymon Anthony Doane: 3.1% (11,606)
 -------------------------
 ```
-
-+ The winner of the election was:
-  + Diana DeGette, who received 73.8% of the votes and 272,892 number of votes.
-
+**Determine the winner of the election based on popular vote.**
 ```
         # Determine winning vote count, winning percentage, and candidate.
         if (votes > winning_count) and (vote_percentage > winning_percentage):
@@ -135,7 +141,7 @@ Raymon Anthony Doane: 3.1% (11,606)
             winning_candidate = candidate_name
             winning_percentage = vote_percentage
 ```
-Python Output:
+> Python Output:
 ```
 -------------------------
 Winner: Diana DeGette
@@ -147,6 +153,6 @@ Winning Percentage: 73.8%
 ## Election Audit Summary
 Using the Python script, we can automate the process so that we can use the code to audit other congressional districts, senatorial districts, and presidential or local elections. 
 
-For presidential elections, we would analyze states instead of counties to find the percentages and votes of each individual state. Additionally, we can also analyze individual counties within each state. Thus, the script will be modified to look at states.
+> For presidential elections, we would analyze states instead of counties to find the percentages and votes of each individual state. Additionally, we can also analyze individual counties within each state. Thus, the script will be modified to look at states.
 
-For senatorial districts, we can analyze districts instead of counties to look into which district had the most votes. Thus, the script will be modified to look at districts.
+> For senatorial districts, we can analyze districts instead of counties to look into which district had the most votes. Thus, the script will be modified to look at districts.
