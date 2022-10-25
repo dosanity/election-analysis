@@ -1,7 +1,3 @@
-[Back to Portfolio](https://dosanity.github.io/){: .backbutton}
-
----
-
 # Election Analysis
 
 ## Project Overview
